@@ -28,7 +28,9 @@ const Content = styled.div`
       }
     }
     input,
-    textarea {
+    textarea,
+    button {
+      font: inherit;
       width: 100%;
       height: 40px;
       background: #efefef;
@@ -41,6 +43,21 @@ const Content = styled.div`
     textarea {
       resize: vertical;
       min-height: 100px;
+    }
+    button {
+    width: 140px;
+    padding: 10px 0;
+    box-sizing: content-box;
+    background: var(--white);
+    color: var(--black);
+    border: 2px solid var(--black);
+
+    cursor: pointer;
+    &:hover{
+      background: var(--black);
+    color: var(--white);
+    }
+}
     }
   }
   .section {
@@ -87,32 +104,38 @@ export default function Contact() {
           <h3>{shortDiscription}</h3>
           <div className="email-form">
             <form
+              name="contact"
               method="post"
-              netlify-honeypot="bot-field"
+              data-netlify-honeypot="bot-field"
               data-netlify="true">
-              <input type="hidden" name="bot-field" />
+              <input type="hidden" name="form-name" value="contact" />
               <fieldset>
                 <legend>Name</legend>
                 <label htmlFor="firstName">
-                  <input type="text" name="First Name" id="firstName" />
+                  <input
+                    type="text"
+                    required
+                    name="First Name"
+                    id="firstName"
+                  />
                   <span>First Name</span>
                 </label>
                 <label htmlFor="lastName">
-                  <input type="text" name="First Name" id="lastName" />
+                  <input type="text" required name="Last Name" id="lastName" />
                   <span>Last Name</span>
                 </label>
               </fieldset>
               <br />
               <label htmlFor="email">
                 Your Email
-                <input type="email" name="Email" id="email" />
+                <input type="email" required name="Email" id="email" />
               </label>
               <br />
               <label htmlFor="content">
                 Message
-                <textarea name="Message" id="content"></textarea>
+                <textarea name="Message" required id="content"></textarea>
               </label>
-              <input type="button" value="SUBMIT" />
+              <button type="submit">Submit</button>
             </form>
           </div>
           <div className="section">

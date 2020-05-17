@@ -42,6 +42,7 @@ export const query = graphql`
       keywords
       gallery {
         asset {
+          _id
           fluid {
             ...GatsbySanityImageFluid
           }
@@ -77,6 +78,7 @@ const Project = ({ data: { sanityPortfolio: project }, pageContext }) => (
     <Gallery>
       {project.gallery.map(({ asset }) => (
         <Image
+          key={asset._id}
           fluid={asset.fluid}
           placeholderStyle={{ filter: 'blur(50px)' }}></Image>
       ))}

@@ -5,15 +5,12 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Gallery from '../components/Gallery';
 
-const IndexPage = ({ data }) => {
-  console.log(data);
-  return (
-    <Layout>
-      <SEO title="" />
-      <Gallery data={data}></Gallery>
-    </Layout>
-  );
-};
+const IndexPage = ({ data }) => (
+  <Layout>
+    <SEO title="" />
+    <Gallery data={data}></Gallery>
+  </Layout>
+);
 export const query = graphql`
   {
     allSanityPortfolio(sort: { fields: _createdAt, order: DESC }) {
