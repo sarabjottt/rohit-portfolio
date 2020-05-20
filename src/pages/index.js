@@ -8,6 +8,7 @@ import Gallery from '../components/Gallery';
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="" />
+
     <Gallery data={data}></Gallery>
   </Layout>
 );

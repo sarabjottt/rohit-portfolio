@@ -7,14 +7,16 @@ import instaLogo from '../assets/images/instagram.svg';
 const NavBar = styled.header`
   width: 100%;
   margin-bottom: 3rem !important;
-  padding: 2.45rem 5%;
+  padding: 1.45rem 5%;
   font-size: 0.6em;
   display: flex;
   align-items: center;
+  /* ----- Experimental ----- */
   /* position: sticky;
   top: 0;
+  backdrop-filter: blur(30px) saturate(180%);
   z-index: 1;
-  background-color: var(--white); */
+  background-color: #ffffff8c; */
   .site-logo {
     font-weight: 400;
     letter-spacing: 2px;
