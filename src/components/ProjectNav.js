@@ -7,14 +7,11 @@ const NavStyle = styled.div`
   justify-content: space-between;
   flex-flow: wrap;
   a {
-    border: none;
-    &:hover {
-      border: none;
-    }
+    margin: 2rem;
   }
   h5 {
-    border-bottom: 2px solid var(--lightGrey);
-    margin: 2rem;
+    /* border-bottom: 2px solid var(--lightGrey); */
+    margin: 0rem;
     &:hover {
       border-color: var(--black);
     }

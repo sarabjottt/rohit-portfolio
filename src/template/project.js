@@ -173,9 +173,10 @@ const Project = ({ data: { sanityPortfolio: project }, pageContext }) => {
 
       <GalleryWrapper>
         {project.gallery.map(({ asset }, index) => (
-          <a key={asset._id} onClick={() => handleClick(index)}>
+          <a key={asset._id} role="button" onClick={() => handleClick(index)}>
             <Image
               fluid={asset.fluid}
+              style={{ height: '100%' }}
               placeholderStyle={{ filter: 'blur(50px)' }}></Image>
           </a>
         ))}

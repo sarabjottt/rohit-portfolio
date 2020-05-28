@@ -55,11 +55,11 @@ const GlobalStyle = createGlobalStyle`
   a {
     color: var(--dark);
     text-decoration: none;
-    &:hover{
-      border-bottom:1px solid var(--lightGrey);
-    }
   }
-  main a{
+  li a:hover{
+    border-bottom:1px solid var(--lightGrey);
+  }
+  main a[href] {
     border-bottom:1px solid var(--lightGrey);
   }
   button{
