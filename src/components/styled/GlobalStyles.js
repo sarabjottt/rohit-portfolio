@@ -4,18 +4,20 @@ import display from '../../assets/fonts/Serif-Display.woff2';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: "Prata";
+    font-family: 'Prata';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
     src: url(${prata}) format("woff2");
+    font-display: fallback;
   }
   @font-face {
-    font-family: "Serif Display";
+    font-family: 'Serif Display';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
     src: url(${display}) format("woff2");
+    font-display: fallback;
   }
   :root{
   --white: #fff;
@@ -29,11 +31,11 @@ const GlobalStyle = createGlobalStyle`
     outline: 3px auto var(--grey);
   }
   html{
-    font-family: 'Prata', 'Times New Roman', Times, serif;
+    font-family: "Prata", "Times New Roman", serif;
     font-size: 16px;
   }
   body{
-    font-family: 'Prata', serif;
+    font-family: "Prata", serif;
     color: var(--black);
     font-size: 2rem;
     margin: 0
@@ -47,7 +49,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   h1,h2,h3,h4,h5,h6 {
-    font-family: 'Serif Display';
+    font-family: "Serif Display";
     font-weight: 400;
     line-height: 1.2;
     letter-spacing:1px;
