@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Header from './header';
 import GlobalStyle from './styled/GlobalStyles';
 import Footer from './Footer';
-import Fonts from './styled/Fonts';
+import '../assets/fonts/Fonts.css';
 
 const Main = styled.main`
   padding: 0 5rem;
@@ -35,7 +35,6 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <Fonts />
       <Header data={data} />
       <Main className="container">{children}</Main>
       <Footer data={data} />
